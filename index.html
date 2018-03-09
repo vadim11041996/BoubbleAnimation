@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Boubble Animation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first-set">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="second-set">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <svg>
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur stdDeviation="8" in="sourceGraphic" result="blur">
+          </feGaussianBlur>
+          <feColorMatrix mode="matrix" in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 14 -8" result="goo"></feColorMatrix>
+          <feBlend in="blur" in2="goo"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+  </body>
+</html>
